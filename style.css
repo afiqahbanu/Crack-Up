@@ -1,0 +1,137 @@
+:root {
+  --brand1: #ff6b6b;       /* coral red */
+  --brand2: #6a0dad;       /* deep purple */
+  --brand3: #00b894;       /* teal green */
+  --bg1: #fff0f5;
+  --bg2: #f0ffff;
+}
+
+/* base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  min-height: 100vh;
+  color: #333;
+  padding: 2rem 1rem;
+}
+
+/* headings */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--brand1);
+  margin-bottom: 0.2rem;
+}
+h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--brand2);
+  margin: 1rem 0;
+}
+
+/* cards */
+.card {
+  background: #ffffffdd;
+  backdrop-filter: blur(8px);
+  padding: 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  padding: 0.75rem 1.2rem;
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand2), var(--brand1));
+  transition: 0.3s;
+}
+button:hover {
+  background: linear-gradient(90deg, var(--brand3), var(--brand1));
+}
+
+/* text links */
+.link {
+  background: none;
+  color: var(--brand2);
+  padding: 0;
+  margin-top: 0.4rem;
+  text-align: left;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* responsive grid layout */
+.row2 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 600px) {
+  .row2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* experience list */
+.list {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 950px;
+  margin: 1.5rem auto;
+}
+.exp {
+  background: #fff;
+  border-radius: 0.85rem;
+  padding: 1rem 1.15rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid var(--brand2);
+}
+.exp h3 {
+  font-size: 1.2rem;
+  color: var(--brand2);
+  margin-bottom: 0.5rem;
+}
+.meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.block {
+  white-space: pre-wrap;
+  background: #eef2ff;
+  padding: 0.6rem;
+  border-radius: 0.45rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
